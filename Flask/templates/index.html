@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .btn {
+            margin: 0px 10px;
+            background-color: Black;
+            color: white;
+            padding: 4px 14px;
+            /* border: 2px solid grey; */
+            border-radius: 8px;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .btn:hover {
+            color: grey;
+            background-color: aliceblue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        form{
+            display: block;
+            padding: 25px;
+        }
+        form input{
+            display: inline-block;
+            padding: 20px;
+            margin: 20px;
+
+        }
+        h1{
+            /* border: 2px solid red; */
+            text-align: center;
+            font-size: 48px;
+            background-color: lightcyan;
+        }
+        p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1>One Year Life expectancy post thoracic surgery</h1>
+        <form action="{{ url_for('predict')}} " method="post">
+            
+            <input type="text" name="V1" placeholder="V1" required="required" />
+            <input type="text" name="V2" placeholder="V2" required="required" />
+            <input type="text" name="V3" placeholder="V3" required="required" />
+            <input type="text" name="V4" placeholder="V4" required="required" />
+            <input type="text" name="V5" placeholder="V5" required="required" />
+            <input type="text" name="V6" placeholder="V6" required="required" />
+            <input type="text" name="V7" placeholder="V7" required="required" />
+            <input type="text" name="V8" placeholder="V8" required="required" />
+            <input type="text" name="V9" placeholder="V9" required="required" />
+            <input type="text" name="V10" placeholder="V10" required="required" />
+            <input type="text" name="V11" placeholder="V11" required="required" />
+            <input type="text" name="V12" placeholder="V12" required="required" />
+            <input type="text" name="V13" placeholder="V13" required="required" />
+            <input type="text" name="V14" placeholder="V14" required="required" />
+            <input type="text" name="V15" placeholder="V15" required="required" />
+            <input type="text" name="V16" placeholder="V16" required="required" />
+
+
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+        
+        <p>
+            {{ prediction_text }}
+        </p>
+        
+
+    </div>
+</body>
+</html>
